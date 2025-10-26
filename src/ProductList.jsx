@@ -42,8 +42,9 @@ function ProductList({ onHomeClick }) {
         {
             category: "Aromatic Fragrant Plants",
             plants: [
-                { name: "Lavender", image: "https://cdn.pixabay.com/photo/2020/05/28/18/43/lavender-5231488_1280.jpg", description: "Calming scent, used in aromatherapy.", cost: 20 },
-                { name: "Jasmine", image: "https://cdn.pixabay.com/photo/2017/08/11/19/22/jasmine-2632617_1280.jpg", description: "Sweet fragrance, promotes relaxation.", cost: 18 },
+                // Alternative Lavender
+
+{ name: "Jasmine", image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=400", description: "Sweet fragrance, promotes relaxation.", cost: 18 },
                 { name: "Rosemary", image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg", description: "Invigorating scent, often used in cooking.", cost: 15 },
                 { name: "Mint", image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg", description: "Refreshing aroma, used in teas and cooking.", cost: 12 },
                 { name: "Lemon Balm", image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg", description: "Citrusy scent, relieves stress and promotes sleep.", cost: 14 },
@@ -76,6 +77,7 @@ function ProductList({ onHomeClick }) {
 
     const handleAddToCart = (product) => {
         console.log('🛒 Adding to cart:', product);
+        // Dispatch addItem action to Redux store
         dispatch(addItem(product));
         setAddedToCart((prev) => ({
             ...prev,
